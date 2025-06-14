@@ -8,19 +8,14 @@ import jakarta.enterprise.context.ApplicationScoped;
 import jakarta.inject.Inject;
 
 @ApplicationScoped
-public class PersonService implements IPersonService{
+public class PersonService implements IPersonService {
 
-	//@Inject 
-	PersonRepo personRepo = new PersonRepo();
-	
-	@Inject 
-	PersonRepo personRepos;
-	
+	@Inject
+	PersonRepo personRepo;
+
 	@Override
-	public void save(Person per) {
-		personRepos.save(per);
+	public Person save(Person per) {
+		personRepo.save(per);
+		return per;
 	}
-	
-	
-
 }
