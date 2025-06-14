@@ -1,8 +1,13 @@
 package com.beesion.ms.test.algorithmst;
 
 import com.beesion.ms.algorithms.FibonacciGenerator;
+import io.quarkus.test.junit.QuarkusTest;
 import jakarta.inject.Inject;
+import org.junit.Test;
+
 import java.util.List;
+
+import static org.junit.Assert.assertEquals;
 
 
 @QuarkusTest
